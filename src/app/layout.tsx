@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Geist_Mono } from 'next/font/google';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import './globals.css';
 
-// Load Geist Mono font
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={geistMono.className}>
-        <main>{children}</main>
+        <Header />
+        <main className="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );

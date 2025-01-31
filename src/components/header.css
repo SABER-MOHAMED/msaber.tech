@@ -1,0 +1,21 @@
+.navbar {
+  padding: 1.5rem;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
