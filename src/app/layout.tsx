@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mohamed Saber' }],
   icons: {
-    icon: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: '/images/icon.png',
+    apple: '/images/icon.png',
   },
   openGraph: {
     title: 'Mohamed Saber - Software Engineer',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Mohamed Saber',
     images: [
       {
-        url: '/images/logo.png',
+        url: '/images/icon.png',
         width: 1200,
         height: 630,
         alt: 'Mohamed Saber - Frontend Engineer',
