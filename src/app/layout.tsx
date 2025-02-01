@@ -12,9 +12,37 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Mohamed Saber',
   description:
-    'Mohamed Saber | Saber - Frontend Engineer crafting beautiful UIs for web & mobile',
+    'Mohamed Saber | Saber - Software Engineer specialized in Frontend and Mobile Development',
+  keywords: [
+    'Mohamed Saber',
+    'Frontend Engineer',
+    'Software Engineer',
+    'UI/UX',
+    'Web Development',
+    'Mobile Development',
+    'Embedded AI',
+  ],
+  authors: [{ name: 'Mohamed Saber' }],
   icons: {
-    icon: '/images/icon.png',
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
+  openGraph: {
+    title: 'Mohamed Saber - Software Engineer',
+    description:
+      'Mohamed Saber | Saber - Software Engineer specialized in Frontend and Mobile Development',
+    url: 'https://msaber.tech',
+    siteName: 'Mohamed Saber',
+    images: [
+      {
+        url: '/images/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mohamed Saber - Frontend Engineer',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
   },
 };
 
