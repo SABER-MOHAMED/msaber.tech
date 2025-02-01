@@ -1,8 +1,11 @@
 .hero {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+  margin: auto;
   text-align: left;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-title {
@@ -12,7 +15,7 @@
 .hero-subtitle {
   line-height: 1.6;
   color: #ddd;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 500;
   max-width: 800px;
   cursor: pointer;
@@ -32,6 +35,7 @@
 }
 
 .hero-button {
+  width: fit-content;
   display: inline-block;
   padding: 1rem 1.5rem;
   font-size: 1rem;

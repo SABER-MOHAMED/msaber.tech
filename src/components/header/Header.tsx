@@ -2,13 +2,7 @@ import './header.css';
 export default function Header() {
   return (
     <header className="navbar">
-      <nav
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
+      <nav className="nav-container">
         <img
           src="/images/logo.png"
           alt="Logo"
@@ -32,12 +26,12 @@ export default function Header() {
           <li>
             <a href="#resume">.resume()</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#projects">.projects()</a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a href="/blog">.blog()</a>
-          </li>
+          </li> */}
           <li>
             <a href="#contact">.contact()</a>
           </li>
