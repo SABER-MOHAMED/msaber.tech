@@ -20,9 +20,10 @@ export default function Resume() {
         name: 'Yutapp',
       },
       details: [
-        'Led development of key features using React and TypeScript',
-        'Improved application performance by 40%',
+        'Contributed to 3+ projects, including a React Native app',
+        'Conducted interviews and participated in hiring decisions',
         'Mentored junior developers and conducted code reviews',
+        '',
       ],
     },
     {

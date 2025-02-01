@@ -2,7 +2,7 @@
   max-width: 900px;
   margin: auto;
   text-align: left;
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +10,11 @@
 
 .hero-title {
   color: #ddd;
+}
+.highlight {
+  background-color: peru;
+  font-weight: 600;
+  padding: 0 4px;
 }
 
 .hero-subtitle {
@@ -31,7 +36,7 @@
 }
 
 .hero-description:hover {
-  color: rgba(74, 74, 74, 1);
+  color: rgb(100, 100, 100);
 }
 
 .hero-button {
