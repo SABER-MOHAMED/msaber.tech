@@ -1,5 +1,10 @@
+'use client';
+import { useState } from 'react';
 import './header.css';
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="navbar">
       <nav className="nav-container">
@@ -7,33 +12,26 @@ export default function Header() {
           src="/images/logo.png"
           alt="Logo"
           className="logo"
-          style={{
-            height: '50px',
-            objectFit: 'cover',
-          }}
+          style={{ height: '50px', objectFit: 'cover' }}
         />
-        <ul
-          style={{
-            display: 'flex',
-            listStyle: 'none',
-            margin: 0,
-            padding: 0,
-          }}
+        
+        <button 
+          className="menu-toggle" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
+          <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
+        </button>
+
+        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li>
-            <a href="#about">.about()</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>.about()</a>
           </li>
           <li>
-            <a href="#resume">.resume()</a>
+            <a href="#resume" onClick={() => setIsMenuOpen(false)}>.resume()</a>
           </li>
-          {/* <li>
-            <a href="#projects">.projects()</a>
-          </li> */}
-          {/* <li>
-            <a href="/blog">.blog()</a>
-          </li> */}
           <li>
-            <a href="#contact">.contact()</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>.contact()</a>
           </li>
         </ul>
       </nav>
