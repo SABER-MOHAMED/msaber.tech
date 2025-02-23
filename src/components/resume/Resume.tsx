@@ -20,10 +20,10 @@ export default function Resume() {
         name: 'Yutapp',
       },
       details: [
-        'Contributed to 3+ projects, including a React Native app',
-        'Conducted interviews and participated in hiring decisions',
-        'Mentored junior developers and conducted code reviews',
-        '',
+        // 'Contributed to 3+ projects, including a React Native app',
+        // 'Conducted interviews and participated in hiring decisions',
+        // 'Mentored junior developers and conducted code reviews',
+        // '',
       ],
     },
     {
@@ -43,9 +43,9 @@ export default function Resume() {
         name: 'FromTelecom',
       },
       details: [
-        'Developed responsive web applications',
-        'Implemented CI/CD pipelines',
-        'Reduced bug reports by 30%',
+        // 'Developed responsive web applications',
+        // 'Implemented CI/CD pipelines',
+        // 'Reduced bug reports by 30%',
       ],
     },
   ];

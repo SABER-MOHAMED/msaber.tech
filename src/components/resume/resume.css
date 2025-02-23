@@ -95,12 +95,39 @@
 }
 
 @media (max-width: 768px) {
+  .resume {
+    padding: 3rem 1rem;
+  }
+
+  .resume-title {
+    font-size: 2rem;
+  }
+
   .timeline::before {
     left: 9px;
   }
 
   .timeline-item {
     gap: 1rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    grid-template-columns: 15px 1fr;
+  }
+
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
   }
 }
 
