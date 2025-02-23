@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './pi-status.css';
 
 export default function PiStatusPage() {
-  const [isOnline, setIsOnline] = useState<boolean | null>(true);
+  const [isOnline, setIsOnline] = useState<boolean | null>(false);
 
   return (
     <section id="pi-status">
