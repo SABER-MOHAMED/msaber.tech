@@ -9,7 +9,7 @@ export default function Home() {
       <Hero />
       <Resume />
       <Contact />
-      <PiStatus />
+      {/* <PiStatus /> */}
     </main>
   );
 }
