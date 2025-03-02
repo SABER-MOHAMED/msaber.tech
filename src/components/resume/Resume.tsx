@@ -13,18 +13,13 @@ interface Job {
 export default function Resume() {
   const experience: Job[] = [
     {
-      date: '08/2023 - Present',
-      title: 'Software Engineer',
+      date: '08/2023 - 02/2025',
+      title: 'Founding Frontend Engineer',
       company: {
         link: 'https://yutapp.com/',
         name: 'Yutapp',
       },
-      details: [
-        // 'Contributed to 3+ projects, including a React Native app',
-        // 'Conducted interviews and participated in hiring decisions',
-        // 'Mentored junior developers and conducted code reviews',
-        // '',
-      ],
+      details: [],
     },
     {
       date: '02/2023 - 08/2023',
