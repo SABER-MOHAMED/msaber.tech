@@ -1,22 +1,38 @@
 'use client';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import './header.css';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    setIsMenuOpen(false);
+    if (pathname !== '/' && href.startsWith('/#')) {
+      window.location.href = href;
+    }
+  };
 
   return (
     <header className="navbar">
       <nav className="nav-container">
-        <img
-          src="/images/logo.png"
-          alt="Logo"
-          className="logo"
-          style={{ height: '50px', objectFit: 'cover' }}
-        />
-        
-        <button 
-          className="menu-toggle" 
+        <div className="nav-logo">
+          <a href="/" aria-label="Home">
+            <img
+              src="/images/logo.png"
+              alt="Logo"
+              className="logo"
+              style={{ height: '50px', objectFit: 'cover' }}
+            />
+          </a>
+        </div>
+
+        <button
+          className="menu-toggle"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -25,13 +41,19 @@ export default function Header() {
 
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li>
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>.about()</a>
+            <a href="/#resume" onClick={(e) => handleNavClick(e, '/#resume')}>
+              /resume
+            </a>
           </li>
           <li>
-            <a href="#resume" onClick={() => setIsMenuOpen(false)}>.resume()</a>
+            <a href="/#contact" onClick={(e) => handleNavClick(e, '/#contact')}>
+              /contact
+            </a>
           </li>
           <li>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>.contact()</a>
+            <a href="/blog" onClick={(e) => handleNavClick(e, '/blog')}>
+              /blog
+            </a>
           </li>
         </ul>
       </nav>
