@@ -1,0 +1,126 @@
+.uizchat-background {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  overflow: hidden; /* Prevent scrollbars from potential overflow */
+}
+
+.uizchat-container {
+  background-color: #ffffff;
+  padding: 60px 50px; /* Increased padding */
+  border-radius: 24px; /* More rounded */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+  text-align: center;
+  max-width: 700px; /* Slightly wider */
+  width: 100%;
+  position: relative; /* For potential pseudo-elements or icons */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  transform: scale(1);
+  transition: transform 0.3s ease-out;
+}
+
+.uizchat-container:hover {
+  transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+.uizchat-icon {
+  font-size: 3.5em; /* Larger icon */
+  color: #4a90e2; /* Brand color */
+  margin-bottom: 20px;
+  display: inline-block; /* To allow margin */
+}
+
+.uizchat-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2.8em; /* Adjusted size */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.uizchat-container p {
+  color: #555;
+  font-size: 1.2em; /* Larger paragraph text */
+  line-height: 1.7;
+  margin-bottom: 15px;
+  max-width: 550px; /* Limit text width for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styles for the list within the paragraph */
+.uizchat-container p ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  margin-top: 15px; /* Add space above the list */
+  text-align: left; /* Align list items to the left */
+  max-width: 400px; /* Control list width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.uizchat-container p li {
+  position: relative;
+  padding-left: 25px; /* Space for custom marker */
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 0.95em; /* Slightly smaller font for list items */
+  color: #444; /* Slightly darker text for list items */
+}
+
+/* Custom list marker */
+.uizchat-container p li::before {
+  content: '✓'; /* Checkmark symbol */
+  position: absolute;
+  left: 0;
+  top: 1px; /* Adjust vertical alignment */
+  color: #4a90e2; /* Use brand color for marker */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.uizchat-container p.highlight {
+  font-weight: 600;
+  color: #4a90e2; /* Highlight color */
+  margin-top: 30px; /* Increased space above highlight */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .uizchat-container {
+    padding: 50px 30px;
+    max-width: 90%;
+  }
+  .uizchat-container h1 {
+    font-size: 2.2em;
+  }
+  .uizchat-container p {
+    font-size: 1.1em;
+  }
+  .uizchat-icon {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .uizchat-container {
+    padding: 40px 20px;
+  }
+  .uizchat-container h1 {
+    font-size: 1.8em;
+  }
+  .uizchat-container p {
+    font-size: 1em;
+  }
+  .uizchat-icon {
+    font-size: 2.5em;
+  }
+  .uizchat-container p ul {
+    max-width: 90%; /* Adjust list width for smaller screens */
+  }
+  .uizchat-container p li {
+    font-size: 0.9em;
+  }
+}
