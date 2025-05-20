@@ -3,7 +3,9 @@ import { useForm, ValidationError } from '@formspree/react';
 import './contact.css';
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm('xeoekgnl');
+  const [state, handleSubmit] = useForm(
+    process.env.NEXT_PUBLIC_FORMSPREE_KEY || ''
+  );
 
   const socialLinks = [
     {
