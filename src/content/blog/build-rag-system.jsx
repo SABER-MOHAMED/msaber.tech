@@ -5,10 +5,13 @@ export default function BuildRAGSystem() {
     <div>
       <Image
         src="/blog/build-rag-system.png"
+        className="blog-hero-image"
         alt="Build a RAG System"
         width={800}
         height={400}
+        priority
       />
+
       <p>06 July, 2025 ・🕒 8 min read</p>
       <p>
         As AI becomes increasingly accessible, we gain powerful opportunities to

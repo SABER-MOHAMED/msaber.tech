@@ -1,6 +1,8 @@
+'use client';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { blogPosts } from '@/content/blog/blogsMetaData';
+import '../blog.css';
 
 export default async function BlogPost({ params }: any) {
   const { slug } = params;
