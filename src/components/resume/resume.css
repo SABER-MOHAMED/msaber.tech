@@ -1,5 +1,5 @@
 .resume {
-  padding: 4rem 1.5rem;
+  padding: 4rem 1.5rem 0 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -11,69 +11,151 @@
   color: #ddd;
 }
 
-.timeline {
+/* Horizontal Timeline Visualization */
+.timeline-visualization {
+  margin-bottom: 4rem;
   position: relative;
-  padding: 2rem 0;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 9;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, #316ff6, #ff6f00);
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.timeline-marker {
-  width: 20px;
-  height: 20px;
-  background: var(--background) !important;
-  z-index: 1;
-  border: 3px solid #316ff6;
-  border-radius: 50%;
-  margin-top: 5px;
-}
-
-.timeline-content {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
+  background-color: #000;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px 20px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.timeline-date {
+.timeline-years {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.timeline-year {
   font-size: 0.9rem;
-  color: #666;
+  color: #fff;
   font-weight: 500;
+  padding: 0 0.25rem;
+  text-align: center;
 }
 
-.timeline-title {
-  margin: 0.5rem 0;
-  font-size: 1.25rem;
-  color: #ccc;
+.timeline-jobs {
+  position: relative;
+  height: 300px;
+  padding: 1rem 0;
 }
 
-.timeline-company {
-  font-weight: 500;
-  margin-bottom: 1rem;
-  padding-bottom: 2px;
-  width: fit-content;
-  border-bottom: 1px solid transparent;
+.timeline-job-container {
+  position: relative;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.timeline-job-bar {
+  position: absolute;
+  height: 4px;
+  margin-bottom: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 1;
 }
-.timeline-company:hover {
+
+.timeline-job-container:nth-child(1) {
+  top: 10px;
+}
+
+.timeline-job-container:nth-child(2) {
+  top: 60px;
+}
+
+.timeline-job-container:nth-child(3) {
+  top: 110px;
+}
+
+.timeline-job-info {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Hover card styles */
+.timeline-hover-card {
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.95);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  width: 300px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10;
+  top: 30px;
+  left: 0;
+  border-left: 4px solid;
+}
+
+.timeline-job-container:hover .timeline-hover-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-job-title {
+  font-weight: 500;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.timeline-job-company {
+  font-size: 0.75rem;
+  color: #ddd;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Card content styles */
+.timeline-card-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.timeline-card-company {
+  font-size: 0.9rem;
   color: #ccc;
-  border-bottom: 1px solid #bbb;
+  margin-bottom: 10px;
+}
+
+.timeline-card-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.timeline-card-details {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-card-details li {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 6px;
+  padding-left: 12px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.timeline-card-details li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: inherit;
 }
 
 .timeline-details {
@@ -94,9 +176,72 @@
   left: 0;
 }
 
+/* Scroll indicator element that only shows on mobile */
+.timeline-scroll-indicator {
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: rgba(30, 30, 30, 0.7);
+  pointer-events: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
 @media (max-width: 768px) {
   .resume {
     padding: 3rem 1rem;
+  }
+
+  .timeline-visualization {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .timeline-scroll-indicator {
+    display: block;
+  }
+
+  .timeline-years,
+  .timeline-bar,
+  .timeline-jobs {
+    min-width: 600px;
+  }
+
+  .timeline-job-info {
+    font-size: 0.8rem;
+  }
+
+  .timeline-job-title {
+    font-size: 0.8rem;
+  }
+
+  .timeline-job-company {
+    font-size: 0.7rem;
+  }
+
+  .timeline-hover-card {
+    width: 250px;
+    max-width: 80vw;
+    left: 10% !important;
   }
 
   .resume-title {
@@ -105,46 +250,5 @@
 
   .timeline::before {
     left: 9px;
-  }
-
-  .timeline-item {
-    gap: 1rem;
-  }
-
-  .timeline-content {
-    padding: 1rem;
-  }
-
-  .timeline-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .timeline-item {
-    grid-template-columns: 15px 1fr;
-  }
-
-  .timeline-marker {
-    width: 15px;
-    height: 15px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .timeline-content {
-    background: rgba(255, 255, 255, 0.03);
-  }
-
-  .timeline-date {
-    color: #999;
-  }
-
-  .timeline-company {
-    color: #bbb;
-  }
-
-  .timeline-marker {
-    background: #1a1a1a;
   }
 }
