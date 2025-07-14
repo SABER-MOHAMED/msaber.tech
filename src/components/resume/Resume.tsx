@@ -13,22 +13,28 @@ interface Job {
 export default function Resume() {
   const experience: Job[] = [
     {
-      date: '08/2023 - 02/2025',
+      date: '06/2023 - 07/2025',
+      title: 'Frontend Engineer',
+      company: {
+        link: 'https://www.mabiplus.ma/',
+        name: 'MabiPlus - Freelance',
+      },
+      details: [
+        'Refactoring legacy code to improve performance and maintainability;',
+        'Ensuring responsive design across multiple devices for a seamless UX;',
+        'Collaborating with tech leads and other engineers to align on implementation and functionality, and doing code review.',
+      ],
+    },
+    {
+      date: '02/2023 - 02/2025',
       title: 'Founding Frontend Engineer',
       company: {
         link: 'https://yutapp.com/',
-        name: 'Yutapp',
+        name: 'Yutapp - Full Time',
       },
-      details: [],
-    },
-    {
-      date: '02/2023 - 08/2023',
-      title: 'Software Engineer Intern',
-      company: {
-        link: 'https://yutapp.com/',
-        name: 'Yutapp',
-      },
-      details: [],
+      details: [
+        'been part of the founding team, check out the project at https://www.producthunt.com/products/yutapp/makers',
+      ],
     },
     {
       date: '07/2020 - 09/2022',
