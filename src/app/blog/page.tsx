@@ -1,6 +1,7 @@
 'use client';
 import './blog.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogPosts } from '@/content/blog/blogsMetaData';
 
 export default function Blog() {
@@ -11,6 +12,13 @@ export default function Blog() {
         {blogPosts.map((post, index) => (
           <Link href={`/blog/${post.slug}`} key={index}>
             <article className="blog-card">
+              <Image
+                src={`/blog/${post.slug}.png`}
+                alt={`${post.title} Logo`}
+                className="blog-image"
+                width={800}
+                height={400}
+              />
               <h2>{post.title}</h2>
               <div className="blog-date">{post.date}</div>
               <p className="blog-preview">{post.preview}</p>

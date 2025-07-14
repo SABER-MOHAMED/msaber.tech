@@ -4,7 +4,7 @@ export default function JavaScriptGeneratorsOverview() {
   return (
     <div>
       <Image
-        src="/blog/js-generators-logo.png"
+        src="/blog/js-generators.png"
         alt="JavaScript Generators Logo"
         width={800}
         height={400}
