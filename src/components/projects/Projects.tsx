@@ -11,17 +11,27 @@ interface Project {
 export default function Projects() {
   const projectList: Project[] = [
     {
+      title: 'Traffic Tracking System Deployed on Raspberry Pi 5',
+      description:
+        'System that tracks highway traffic, deployed on a Raspberry Pi 5, uses YOLOv8 for object detection combined with DeepSORT for multi-object tracking.',
+      link: {
+        name: 'View on LinkedIn',
+        href: 'https://www.linkedin.com/in/saber-codes/overlay/projects/845173325/multiple-media-viewer/?profileId=ACoAADY24RQBoEeRHbAXUeS9FCPmiaRlUeAfhMw&treasuryMediaId=1753191830839',
+      },
+      image: '/projects/highway-vehicle-tracking.jpeg',
+    },
+    {
       title: 'AskUIZ',
       description:
-        'Askuiz is an intelligent conversational assistant designed to answer student-related inquiries at Ibn Zohr University. it provides instant access to administrative information,',
+        "An intelligent conversational assistant designed to answer student' pedagogical inquiries at Ibn Zohr University. It provides instant access to administrative information.",
       link: {
-        name: 'askuiz.msaber.tech',
-        href: 'https://askuiz.msaber.tech',
+        name: 'Demo on LinkedIn',
+        href: 'https://www.linkedin.com/posts/saber-codes_ai-rag-chatbot-activity-7354489281999949824-JpXb',
       },
       image: '/projects/askuiz.png',
     },
     {
-      title: 'Hadith',
+      title: 'Hadith 2.3K+ Downloads',
       description:
         'A VSCode extension that displays a random Hadith in your coding environment. Designed for Muslim developers.',
       link: {

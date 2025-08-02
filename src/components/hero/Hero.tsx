@@ -1,20 +1,39 @@
+import Image from 'next/image';
 import './hero.css';
 
 export default function Hero() {
   return (
     <section aria-label="About Me" className="hero" id="about">
-      <h1 className="hero-title">Mohamed Saber</h1>
+      <Image
+        src="/images/mohamed-saber.jpg"
+        alt="Mohamed Saber"
+        className="hero-image"
+        width={200}
+        height={200}
+      />
+      <h2 className="hero-title">Mohamed Saber</h2>
       <p className="hero-subtitle">
-        Born to do <span className="highlight">Software Engineering</span>,
-        forced to deep dive into{' '}
-        <span className="highlight">Hardware Engineering</span>.
-      </p>
-
-      <p className="hero-description">
-        have and still delivering software for over 2 years .contributed to
-        diverse projects. tackled countless challenges around performance, user
-        experience, and maintainability. currently pursuing a Master’s degree in
-        Embedded AI.
+        Master's candidate in <span className="highlight">Embedded AI</span>{' '}
+        with 2+ years of professional{' '}
+        <span className="highlight">software engineering</span> experience. I'm
+        continuously expanding my knowledge in{' '}
+        <span className="highlight">NLP</span>,{' '}
+        <span className="highlight">Computer Vision</span>,{' '}
+        <span className="highlight">Embedded Systems Architecture</span>, with a
+        passion for building intelligent, AI-Agent based applications.
+        Throughout my academic and professional journey, I have contributed to
+        diverse projects spanning{' '}
+        <span className="highlight">performance optimization</span>,{' '}
+        <span className="highlight">system architecture</span>,{' '}
+        <span className="highlight">machine learning</span>, and{' '}
+        <span className="highlight">user experience design</span>. I strive to
+        understand emerging methods for running AI models efficiently on
+        resource-constrained devices, bringing advanced AI concepts closer to
+        practical embedded applications. I am actively seeking opportunities to
+        leverage my engineering background and research expertise to contribute
+        to innovative projects in <span className="highlight">AI research</span>
+        , <span className="highlight">embedded systems</span>, and{' '}
+        <span className="highlight">intelligent software solutions</span>.
       </p>
 
       <a href="#contact" className="hero-button">

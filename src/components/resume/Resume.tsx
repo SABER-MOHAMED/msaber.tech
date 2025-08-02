@@ -33,23 +33,20 @@ export default function Resume() {
   // Parse dates and add colors
   const experience: Job[] = [
     {
-      date: '06/2025 - 07/2025',
-      title: 'Frontend Engineer',
+      date: '06/2025 - 09/2025',
+      title: 'Software Engineer',
       company: {
-        link: 'https://www.mabiplus.ma/',
-        name: 'MabiPlus - Freelance',
+        link: 'https://www.linkedin.com/in/saber-codes/',
+        name: 'Freelance',
       },
-      details: [
-        'Refactoring legacy code to improve performance and maintainability;',
-        'Ensuring responsive design across multiple devices for a seamless UX;',
-        'Collaborating with tech leads and other engineers to align on implementation and functionality, and doing code review.',
-      ],
+      details: [],
       startYear: 2025,
-      startMonth: 6, // June
+      startMonth: 6,
       endYear: 2025,
-      endMonth: 7, // July
-      color: colors[0],
+      endMonth: 9,
+      color: colors[3],
     },
+
     {
       date: '02/2023 - 02/2025',
       title: 'Founding Frontend Engineer',

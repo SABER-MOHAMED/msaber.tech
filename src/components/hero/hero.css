@@ -11,32 +11,26 @@
 .hero-title {
   color: #ddd;
 }
+.hero-image {
+  width: 10rem;
+  height: 10.5rem;
+  object-fit: none;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
 .highlight {
-  background-color: #cd853f96;
-  font-weight: 600;
-  padding: 0 4px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .hero-subtitle {
   line-height: 1.6;
-  color: #ddd;
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 300;
   max-width: 800px;
-  cursor: pointer;
-}
-
-.hero-description {
-  line-height: 1.8;
-  color: rgba(85, 85, 85, 0.9);
-  margin-bottom: 1.5rem;
-  max-width: 800px;
-  transition: color 0.4s ease;
-  cursor: pointer;
-}
-
-.hero-description:hover {
-  color: rgb(100, 100, 100);
+  /* text-wrap: justify; */
+  color: #bbb;
+  font-size: 0.9rem;
 }
 
 .hero-button {
@@ -69,16 +63,16 @@
 }
 
 /* Dark mode support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .hero-subtitle {
     color: #e1e1e1;
   }
 
   .hero-description {
-    color: rgba(180, 180, 180, 0.75); /* lighter initial color for dark mode */
+    color: rgba(180, 180, 180, 0.75); 
   }
 
   .hero-description:hover {
-    color: rgba(180, 180, 180, 1); /* solid color on hover for dark mode */
+    color: rgba(180, 180, 180, 1); 
   }
-}
+} */
