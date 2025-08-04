@@ -36,9 +36,17 @@ export default function Hero() {
         <span className="highlight">intelligent software solutions</span>.
       </p>
 
-      <a href="#contact" className="hero-button">
-        Let's connect
-      </a>
+      <div className="hero-buttons">
+        <a href="#contact" className="hero-button hero-button-secondary">
+          Contact
+        </a>
+        <a
+          href="/content/Mohamed-Saber-CV.pdf"
+          className="hero-button hero-button-primary"
+        >
+          View CV
+        </a>
+      </div>
     </section>
   );
 }
