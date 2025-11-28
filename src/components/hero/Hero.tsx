@@ -5,15 +5,18 @@ export default function Hero() {
   return (
     <section aria-label="About Me" className="hero" id="about">
       <Image
-        src="/images/mohamed-saber.jpg"
+        // src="/images/mohamed-saber.jpg"
+        src="https://preview.redd.it/post-the-best-cat-memes-you-got-in-the-comments-please-v0-kg82lbnu0ste1.png?width=320&crop=smart&auto=webp&s=d7842b004b6d96b224b2cbb8af63798d1a10b583"
         alt="Mohamed Saber"
         className="hero-image"
         width={200}
         height={200}
       />
-      <h2 className="hero-title">Mohamed Saber</h2>
+      <h2 className="hero-title">
+        Looking for the file, right!!!!! Here you are
+      </h2>
       <p className="hero-subtitle">
-        Master's candidate in <span className="highlight">Embedded AI</span>{' '}
+        {/* Master's candidate in <span className="highlight">Embedded AI</span>{' '}
         with 2+ years of professional{' '}
         <span className="highlight">software engineering</span> experience. I'm
         continuously expanding my knowledge in{' '}
@@ -29,15 +32,17 @@ export default function Hero() {
         <span className="highlight">user experience design</span>. I strive to
         understand emerging methods for running AI models efficiently on
         resource-constrained devices, bringing advanced AI concepts closer to
-        practical embedded applications. I am actively seeking opportunities to
-        leverage my engineering background and research expertise to contribute
-        to innovative projects in <span className="highlight">AI research</span>
-        , <span className="highlight">embedded systems</span>, and{' '}
-        <span className="highlight">intelligent software solutions</span>.
+        practical embedded applications.*/}
       </p>
 
       <div className="hero-buttons">
-        <a href="#contact" className="hero-button hero-button-secondary">
+        <a
+          href="/content/Git_Github.pdf"
+          className="hero-button hero-button-primary"
+        >
+          Git & GitHub Workshop
+        </a>
+        {/* <a href="#contact" className="hero-button hero-button-secondary">
           Contact
         </a>
         <a
@@ -45,7 +50,7 @@ export default function Hero() {
           className="hero-button hero-button-primary"
         >
           View CV
-        </a>
+        </a> */}
       </div>
     </section>
   );
