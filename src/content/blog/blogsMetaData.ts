@@ -12,6 +12,18 @@ interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: 'Git & GitHub Workshop: Master Version Control and Collaboration',
+    slug: 'git-github-workshop',
+    preview:
+      'I conducted a workshop on Git and GitHub with my colleague Fatima Zahra. The workshop was aimed at helping students master version control and collaboration in software development projects.',
+    date: '2025-12-01',
+    tags: ['Git', 'GitHub', 'Workshop'],
+    coAuthor: {
+      name: 'Fatima Zahra',
+      link: 'https://www.linkedin.com/in/fatimazahraboulaghla/',
+    },
+  },
+  {
     title: 'Building a RAG System with LlamaIndex, Pinecone, and GPT-4',
     slug: 'build-rag-system',
     preview:

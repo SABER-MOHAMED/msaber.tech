@@ -18,7 +18,7 @@ interface Job {
 }
 
 export default function Resume() {
-  const colors = ['#14b8a6', '#3b82f6', '#f59e0b', '#ef4444'];
+  const colors = ['#0ea5e9', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
   const currentYear = new Date().getFullYear();
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== 'undefined' ? window.innerWidth : 1000
@@ -33,20 +33,33 @@ export default function Resume() {
   // Parse dates and add colors
   const experience: Job[] = [
     {
-      date: '06/2025 - 09/2025',
+      date: '06/2025 - 08/2025',
       title: 'Software Engineer',
       company: {
-        link: 'https://www.linkedin.com/in/saber-codes/',
-        name: 'Freelance',
+        link: 'https://www.mabiplus.ma/',
+        name: 'MabiPlus - Freelance',
       },
       details: [],
       startYear: 2025,
       startMonth: 6,
       endYear: 2025,
-      endMonth: 9,
+      endMonth: 8,
+      color: colors[4],
+    },
+    {
+      date: '08/2025 - 10/2025',
+      title: 'AI Engineer',
+      company: {
+        link: 'https://www.linkedin.com/company/fandasoft',
+        name: 'FandaSoft - Freelance',
+      },
+      details: [],
+      startYear: 2025,
+      startMonth: 8,
+      endYear: 2025,
+      endMonth: 10,
       color: colors[3],
     },
-
     {
       date: '02/2023 - 02/2025',
       title: 'Founding Frontend Engineer',
@@ -92,6 +105,13 @@ export default function Resume() {
   // Calculate total months in the timeline for precise positioning
   const totalMonths = (endYear - startYear + 1) * 12;
 
+  // Sort experience by start date (most recent first)
+  const sortedExperience = [...experience].sort((a, b) => {
+    const aStart = (a.startYear || 0) * 12 + (a.startMonth || 0);
+    const bStart = (b.startYear || 0) * 12 + (b.startMonth || 0);
+    return bStart - aStart;
+  });
+
   return (
     <section aria-label="Resume" className="resume" id="resume">
       <h2 className="resume-title">Work Experience</h2>
@@ -112,7 +132,7 @@ export default function Resume() {
 
         {/* Job bars with metadata */}
         <div className="timeline-jobs">
-          {experience.map((job, index) => {
+          {sortedExperience.map((job, index) => {
             // Calculate position based on months for more precise visualization
             const startMonthsFromBeginning =
               ((job.startYear || startYear) - startYear) * 12 +
@@ -126,7 +146,7 @@ export default function Resume() {
             const startPosition =
               (startMonthsFromBeginning / totalMonths) * 100;
             const endPosition = (endMonthsFromBeginning / totalMonths) * 100;
-            const width = endPosition - startPosition;
+            const width = Math.max(endPosition - startPosition, 3); // Minimum width for visibility
 
             return (
               <div
@@ -146,7 +166,6 @@ export default function Resume() {
                   className="timeline-job-info"
                   style={{
                     left: `${startPosition}%`,
-                    width: `${width}%`,
                   }}
                 >
                   <div className="timeline-job-title">{job.title}</div>
@@ -160,7 +179,7 @@ export default function Resume() {
                     left:
                       windowWidth <= 768
                         ? '0'
-                        : `${Math.min(Math.max(startPosition, 0), 70)}%`,
+                        : `${Math.min(Math.max(startPosition, 0), 60)}%`,
                   }}
                 >
                   <div className="timeline-card-title">{job.title}</div>
@@ -168,11 +187,13 @@ export default function Resume() {
                     {job.company.name}
                   </div>
                   <span className="timeline-card-date">{job.date}</span>
-                  <ul className="timeline-card-details">
-                    {job.details.map((detail, idx) => (
-                      <li key={idx}>{detail}</li>
-                    ))}
-                  </ul>
+                  {job.details.length > 0 && (
+                    <ul className="timeline-card-details">
+                      {job.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             );
