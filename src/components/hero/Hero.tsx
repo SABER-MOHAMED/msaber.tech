@@ -12,25 +12,75 @@ export default function Hero() {
         height={200}
       />
       <h2 className="hero-title">Mohamed Saber</h2>
-      <p className="hero-subtitle">
-        Master's candidate in <span className="highlight">Embedded AI</span>{' '}
-        with 2+ years of professional{' '}
-        <span className="highlight">software engineering</span> experience. I'm
-        continuously expanding my knowledge in{' '}
-        <span className="highlight">NLP</span>,{' '}
-        <span className="highlight">Computer Vision</span>,{' '}
-        <span className="highlight">Embedded Systems Architecture</span>, with a
-        passion for building intelligent, AI-Agent based applications.
-        Throughout my academic and professional journey, I have contributed to
-        diverse projects spanning{' '}
-        <span className="highlight">performance optimization</span>,{' '}
-        <span className="highlight">system architecture</span>,{' '}
-        <span className="highlight">machine learning</span>, and{' '}
-        <span className="highlight">user experience design</span>. I strive to
-        understand emerging methods for running AI models efficiently on
-        resource-constrained devices, bringing advanced AI concepts closer to
-        practical embedded applications.
-      </p>
+      <div className="hero-bio">
+        <p>
+          I hold an M.Sc. in Embedded Artificial Intelligence from{' '}
+          <a
+            href="https://www.uiz.ac.ma/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ibn Zohr University
+          </a>
+          , and conducted research with the{' '}
+          <a
+            href="https://www.utwente.nl/en/eemcs/caes/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CAES (Computer Architecture for Embedded Systems) Group
+          </a>{' '}
+          at the{' '}
+          <a
+            href="https://www.utwente.nl/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Twente
+          </a>
+          , supervised by{' '}
+          <a
+            href="https://people.utwente.nl/a.yousefzadeh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dr. ir. Amirreza Yousefzadeh
+          </a>
+          . My research centers on{' '}
+          <span className="highlight">Hardware-Software Co-Design</span>,{' '}
+          <span className="highlight">Model Optimization</span>, and{' '}
+          <span className="highlight">Neuromorphic & Edge Architectures</span>.
+          For my master’s thesis, I investigated scaling Vision Transformer
+          (DeiT) blocks onto SparkRV—an open-source RISC-V many-core neuromorphic
+          processor—focusing on on-chip SRAM constraints, custom firmware
+          operators, and multi-core Network-on-Chip (NoC) distribution.
+          For more information about my thesis, you can check my{' '}
+          <a
+            href="/content/Thesis_Abstract.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thesis Abstract.
+          </a>
+        </p>
+
+        <p>
+          Alongside my academic research, I worked as an AI Software Engineer at{' '}
+          <a
+            href="https://www.linkedin.com/company/fandasoft"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            FandaSoft
+          </a>
+          , building automated DSL generation and model evaluation pipelines via
+          AWS Bedrock. Also, I worked for 2 years as a Founding Software Engineer
+          at{' '}
+          <a href="https://yutapp.com/" target="_blank" rel="noopener noreferrer">
+            Yutapp.
+          </a>
+        </p>
+      </div>
 
       <div className="hero-buttons">
         <a href="#contact" className="hero-button hero-button-secondary">
@@ -38,6 +88,8 @@ export default function Hero() {
         </a>
         <a
           href="/content/Mohamed Saber CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hero-button hero-button-primary"
         >
           View CV
