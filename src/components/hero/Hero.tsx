@@ -36,12 +36,12 @@ export default function Hero() {
         <a href="#contact" className="hero-button hero-button-secondary">
           Contact
         </a>
-        {/* <a
-          href="/content/Mohamed-Saber-CV.pdf"
+        <a
+          href="/content/Mohamed Saber CV.pdf"
           className="hero-button hero-button-primary"
         >
           View CV
-        </a> */}
+        </a>
       </div>
     </section>
   );

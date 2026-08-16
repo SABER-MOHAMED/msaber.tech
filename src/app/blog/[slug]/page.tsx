@@ -3,8 +3,12 @@ import dynamic from 'next/dynamic';
 import { blogPosts } from '@/content/blog/blogsMetaData';
 import '../blog.css';
 
-export default async function BlogPost({ params }: any) {
-  const { slug } = params;
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function BlogPost({ params }: PageProps) {
+  const { slug } = await params;
 
   if (!slug || slug.length === 0) {
     notFound();
