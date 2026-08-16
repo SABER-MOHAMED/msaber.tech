@@ -5,11 +5,11 @@ export default function Hero() {
   return (
     <section aria-label="About Me" className="hero" id="about">
       <Image
-        src="/images/mohamed-saber.jpg"
+        src="/images/mohamed saber profile image.png"
         alt="Mohamed Saber"
         className="hero-image"
-        width={200}
-        height={200}
+        width={400}
+        height={400}
       />
       <h2 className="hero-title">Mohamed Saber</h2>
       <div className="hero-bio">
@@ -56,7 +56,7 @@ export default function Hero() {
           operators, and multi-core Network-on-Chip (NoC) distribution.
           For more information about my thesis, you can check my{' '}
           <a
-            href="/content/Thesis_Abstract.pdf"
+            href="/content/Thesis_abstract.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
