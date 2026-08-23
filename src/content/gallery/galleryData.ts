@@ -12,4 +12,10 @@ export const milestones: Milestone[] = [
     image: '/blog/mohamed-saber-university-of-twente.jpg',
     alt: 'Mohamed Saber at the University of Twente',
   },
+  {
+    id: 'graduation-day',
+    sentence: 'Graduation day',
+    image: '/blog/mohamed-saber-graduation-day.jpeg',
+    alt: 'Mohamed Saber graduation day',
+  },
 ];

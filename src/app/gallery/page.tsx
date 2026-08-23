@@ -10,7 +10,6 @@ export default function GalleryPage() {
       <div className="milestones-grid">
         {milestones.map((milestone) => (
           <article key={milestone.id} className="milestone-item">
-            <p className="milestone-sentence">{milestone.sentence}</p>
             <div className="milestone-image-wrap">
               <Image
                 src={milestone.image}
@@ -20,6 +19,7 @@ export default function GalleryPage() {
                 className="milestone-img"
               />
             </div>
+            <p className="milestone-sentence">{milestone.sentence}</p>
           </article>
         ))}
       </div>
