@@ -55,6 +55,11 @@ export default function Header() {
               /blog
             </a>
           </li>
+          <li>
+            <a href="/gallery" onClick={(e) => handleNavClick(e, '/gallery')}>
+              /gallery
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
