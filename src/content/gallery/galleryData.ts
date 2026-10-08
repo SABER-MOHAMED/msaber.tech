@@ -13,6 +13,12 @@ export const milestones: Milestone[] = [
     alt: 'Mohamed Saber at the University of Twente',
   },
   {
+    id: 'messy-office-twente-caes',
+    sentence: 'Messy office at CAES, University of Twente',
+    image: '/blog/messy_office_twente_CAES.png',
+    alt: 'Messy office desk at CAES, University of Twente',
+  },
+  {
     id: 'graduation-day',
     sentence: 'Graduation day',
     image: '/blog/mohamed-saber-graduation-day.jpeg',
