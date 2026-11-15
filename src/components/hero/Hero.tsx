@@ -87,7 +87,7 @@ export default function Hero() {
           Contact
         </a>
         <a
-          href="/content/Mohamed Saber CV.pdf"
+          href="/content/Mohamed Saber -- Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hero-button hero-button-primary"
